@@ -1,0 +1,13 @@
+add_xblang_library(
+  XBSyntaxLexGen
+  SDTranslation.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Syntax/LexGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  XBSyntaxDialect
+  XBSyntaxGenUtils
+  XBLangBasic
+  XBLangSyntax
+)

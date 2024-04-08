@@ -1,0 +1,11 @@
+set(LLVM_TARGET_DEFINITIONS Symbol.td)
+mlir_tablegen(SymbolEnums.h.inc -gen-enum-decls)
+mlir_tablegen(SymbolEnums.cpp.inc -gen-enum-defs)
+mlir_tablegen(SymbolInterfaces.h.inc -gen-op-interface-decls)
+mlir_tablegen(SymbolInterfaces.cpp.inc -gen-op-interface-defs)
+add_public_tablegen_target(XBInterfacesSymbolIncGen)
+
+set(LLVM_TARGET_DEFINITIONS Concept.td)
+mlir_tablegen(ConceptInterfaces.h.inc -gen-op-interface-decls)
+mlir_tablegen(ConceptInterfaces.cpp.inc -gen-op-interface-defs)
+add_public_tablegen_target(XBInterfacesConceptIncGen)

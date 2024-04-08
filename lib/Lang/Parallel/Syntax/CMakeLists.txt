@@ -1,0 +1,12 @@
+add_xblang_library(
+  ParLangSyntax
+  Syntax.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Lang/Parallel/Syntax
+  DEPENDS
+  ParParserInc
+  LINK_LIBS
+  PUBLIC
+  XBLangLangSyntax
+  MLIRParallel
+)

@@ -1,0 +1,9 @@
+add_xb_unittest(XBBasicTests
+  SourceManager.cpp
+)
+target_link_libraries(XBBasicTests
+  PRIVATE
+  MLIRIR
+  MLIRSupport
+  XBLangBasic
+)

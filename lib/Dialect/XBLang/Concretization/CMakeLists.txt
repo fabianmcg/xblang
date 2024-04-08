@@ -1,0 +1,19 @@
+add_xblang_library(
+  XBLangConcretization
+  Decl.cpp
+  Expr.cpp
+  Stmt.cpp
+  Concretization.cpp
+  DEPENDS
+  MLIRXBLangTransforms
+  XBLangTransforms
+  LINK_LIBS
+  PUBLIC
+  MLIRAnalysis
+  MLIRInferIntRangeInterface
+  MLIRIR
+  MLIRPass
+  MLIRTransforms
+  MLIRTransformUtils
+  XBLangTransforms
+)

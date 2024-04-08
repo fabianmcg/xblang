@@ -1,0 +1,20 @@
+add_xblang_library(
+  XBLangCodegen
+  Codegen.cpp
+  CodegenPass.cpp
+  Utils.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Codegen
+  DEPENDS
+  XBLangCodegenPassesIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRPass
+  MLIRTransforms
+  XBLangSymbol
+  XBLangBasic
+  MLIRIR
+  MLIRArithDialect
+  MLIRIndexDialect
+)

@@ -1,0 +1,20 @@
+add_xblang_library(
+  XBLangSema
+  TypeSystem.cpp
+  SemaPass.cpp
+  Sema.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Sema
+  DEPENDS
+  XBLangSemaPassesIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRPass
+  MLIRTransforms
+  XBLangADT
+  XBLangSymbol
+  MLIRXBLang
+  XBXLGDialect
+  XBLangEval
+)

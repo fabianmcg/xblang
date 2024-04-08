@@ -1,0 +1,7 @@
+add_subdirectory(Interfaces)
+add_subdirectory(Dialect)
+add_subdirectory(Lang)
+add_subdirectory(Codegen)
+add_subdirectory(Sema)
+add_subdirectory(Syntax)
+add_subdirectory(XLG)

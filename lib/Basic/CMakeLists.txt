@@ -1,0 +1,12 @@
+add_xblang_library(
+  XBLangBasic
+  SourceManager.cpp
+  Context.cpp
+  Pattern.cpp
+  TypeSystem.cpp
+  LINK_COMPONENTS
+  Support
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+)

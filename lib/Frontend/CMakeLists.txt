@@ -1,0 +1,41 @@
+if(INCLUDE_MLIR_DILAECTS)
+  get_property(dialect_libs GLOBAL PROPERTY MLIR_DIALECT_LIBS)
+endif()
+
+add_xblang_library(
+  XBLangFrontend
+  CompilerInstance.cpp
+  CompilerInvocation.cpp
+  MLIRPipeline.cpp
+  LINK_LIBS
+  PUBLIC
+  XBLangSyntax
+  XBLangLangSyntax
+  XBLangSema
+  LLVMSupport
+  MLIRIR
+  MLIRLLVMDialect
+  MLIRLLVMToLLVMIRTranslation
+  MLIRTargetLLVMIRExport
+  MLIRTransforms
+  MLIRExecutionEngine
+  MLIRXBLang
+  MLIRParallel
+  XBXLGConcepts
+  XBXLGDialect
+  XBXBGDialect
+  XBLangXBGSema
+  XBLangCodegen
+  XBLangXBGCodeGen
+  XBLangXLGCodeGen
+  XBLangXBGEval
+  XBLangXLGSema
+  ParLangSyntax
+  MetaLangSyntax
+  MLIRPluginsLib
+  XBLangTransforms
+  ParallelTransforms
+  MLIROpenMPToLLVMIRTranslation
+  XBLangConcretization
+  ${dialect_libs}
+)

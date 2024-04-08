@@ -1,0 +1,11 @@
+add_xblang_library(
+  XBXLGUtils
+  Builder.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/XLG
+  LINK_LIBS
+  PUBLIC
+  XBXLGDialect
+  XBXLGConcepts
+  XBLangSymbol
+)

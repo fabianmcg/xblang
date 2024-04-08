@@ -1,0 +1,26 @@
+add_xblang_library(
+  MLIRParallel
+  Parallel.cpp
+  Attrs.cpp
+  Enums.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/include/Dialect
+  DEPENDS
+  MLIRParallelAttributes
+  MLIRParallelEnums
+  MLIRParallelIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRInferTypeOpInterface
+  MLIRControlFlowInterfaces
+  MLIRGPUDialect
+  MLIRROCDLDialect
+  MLIRNVVMDialect
+  MLIRXBLang
+  MLIRTargetLLVMIRExport
+  ParallelFrontend
+  LLVMBinaryFormat
+  LLVMFrontendOffloading
+  LLVMObject
+)

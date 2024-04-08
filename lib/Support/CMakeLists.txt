@@ -1,0 +1,9 @@
+add_xblang_library(
+  XBLangSupport
+  Program.cpp
+  System.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Support
+  LINK_COMPONENTS
+  Support
+)

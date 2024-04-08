@@ -1,0 +1,12 @@
+add_xblang_library(
+  XBLangXBGEval
+  Expr.cpp
+  Eval.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Lang/XBLang/Eval
+  DEPENDS
+  LINK_LIBS
+  PUBLIC
+  XBXBGDialect
+  XBLangEval
+)

@@ -1,0 +1,18 @@
+fn [extern] omp_get_thread_num() -> i32;
+
+fn main() {
+  let bsz: i32 = 4;  // Block size
+  let gsz: i32 = 2;  // Grid size
+  omp parallel firstprivate(bsz, gsz) {
+    let ompId = omp_get_thread_num();
+    gpu::region<<[bsz], [gsz]>> {
+      let tid : i32 = threadIdx.x;
+      let bid : i32 = blockIdx.x;
+      mlir::inline(ompId: 'i32', tid: 'i32', bid: 'i32') '''
+        gpu.printf "Host Thread ID: %d, Block ID: %d, Thread ID: %d\n" %ompId, %bid, %tid : i32, i32, i32
+        xlg.ret
+      ''';
+    }
+  }
+}
+

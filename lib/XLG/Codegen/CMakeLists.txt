@@ -1,0 +1,11 @@
+add_xblang_library(
+  XBLangXLGCodeGen
+  CodeGen.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/XLG/CodeGen
+  DEPENDS
+  LINK_LIBS
+  PUBLIC
+  XBXLGDialect
+  XBLangCodegen
+)

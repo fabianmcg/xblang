@@ -1,0 +1,13 @@
+add_xblang_library(
+  MetaLangSyntax
+  Syntax.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Lang/Meta/Syntax
+  DEPENDS
+  MetaParserInc
+  LINK_LIBS
+  PUBLIC
+  XBLangLangSyntax
+  XBXLGDialect
+  MLIRAsmParser
+)

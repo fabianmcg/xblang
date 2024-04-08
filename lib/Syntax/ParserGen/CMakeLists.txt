@@ -1,0 +1,15 @@
+llvm_add_library(
+  XBSyntaxParserGen
+  STATIC
+  SDTranslation.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Syntax/ParserGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  XBSyntaxDialect
+  XBSyntaxGenUtils
+  XBLangBasic
+  XBLangSyntax
+  XBLangTableGen
+)

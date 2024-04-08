@@ -1,0 +1,5 @@
+add_subdirectory(Syntax)
+add_subdirectory(XLG)
+add_subdirectory(Sema)
+add_subdirectory(Codegen)
+add_subdirectory(Eval)

@@ -1,0 +1,10 @@
+add_xblang_library(
+  XBLangEval
+  Eval.cpp
+  Utils.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Eval
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+)

@@ -1,0 +1,17 @@
+add_xblang_library(
+  XBSyntaxTransforms
+  LexToDFA.cpp
+  MinimizeDFA.cpp
+  ProcessSyntax.cpp
+  AnalizeSyntax.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Syntax/Transforms
+  DEPENDS
+  XBSyntaxPassesIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRPass
+  MLIRTransforms
+  XBSyntaxDialect
+)

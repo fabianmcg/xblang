@@ -1,0 +1,17 @@
+llvm_add_library(
+  XBLangTableGen
+  STATIC
+  Concept.cpp
+  Common.cpp
+  Record.cpp
+  Util.cpp
+  DISABLE_LLVM_LINK_LLVM_DYLIB
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/TableGen
+  ${MLIR_MAIN_INCLUDE_DIR}/mlir/Support
+  LINK_COMPONENTS
+  TableGen
+  LINK_LIBS
+  PUBLIC
+  MLIRTableGen
+)

@@ -1,0 +1,11 @@
+add_xblang_library(
+  MLIRXBAnalysis
+  ScopeAnalysis.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/include/Dialect
+  DEPENDS
+  MLIRXBLang
+  LINK_LIBS
+  PUBLIC
+  MLIRAnalysis
+)

@@ -1,0 +1,15 @@
+add_xblang_library(
+  XBLangLangSyntax
+  Lexer.cpp
+  Syntax.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Lang/XBLang/Syntax
+  DEPENDS
+  XBLangLexerInc
+  XBLangParserInc
+  LINK_LIBS
+  PUBLIC
+  XBLangSyntax
+  XBXLGUtils
+  XBXBGDialect
+)

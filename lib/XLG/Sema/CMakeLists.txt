@@ -1,0 +1,11 @@
+add_xblang_library(
+  XBLangXLGSema
+  Sema.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/XLG/Sema
+  DEPENDS
+  LINK_LIBS
+  PUBLIC
+  XBXLGDialect
+  XBLangSema
+)

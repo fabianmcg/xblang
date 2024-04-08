@@ -1,0 +1,25 @@
+add_xblang_library(
+  MLIRXBLang
+  XBLang.cpp
+  ASMUtils.cpp
+  Decl.cpp
+  Expr.cpp
+  Stmt.cpp
+  Type.cpp
+  Enums.cpp
+  Interfaces.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/include/Dialect
+  DEPENDS
+  MLIRXBLANGEnums
+  MLIRXBLANGInterfaces
+  MLIRXBLANGAttributes
+  MLIRXBLangIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRInferTypeOpInterface
+  MLIRControlFlowInterfaces
+  MLIRFunctionInterfaces
+  MLIRLoopLikeInterface
+)

@@ -1,0 +1,23 @@
+add_xblang_library(
+  XBXBGDialect
+  XBG.cpp
+  XBGDecl.cpp
+  XBGType.cpp
+  XBGStmt.cpp
+  XBGExpr.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Lang/XBLang/XLG
+  DEPENDS
+  XBXBGIncGen
+  XBXBGDeclIncGen
+  XBXBGTypeIncGen
+  XBXBGStmtIncGen
+  XBXBGExprIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRXBLang
+  XBXLGConcepts
+  XBLangSymbol
+  XBXLGDialect
+)

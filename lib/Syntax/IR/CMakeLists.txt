@@ -1,0 +1,17 @@
+add_xblang_library(
+  XBSyntaxDialect
+  Syntax.cpp
+  ADDITIONAL_HEADER_DIRS
+  ${PROJECT_SOURCE_DIR}/xblang/Syntax/LexGen
+  DEPENDS
+  MLIRSyntaxOpsIncGen
+  XBSyntaxOpsEnumsGen
+  XBSyntaxOpsAttributesIncGen
+  LINK_LIBS
+  PUBLIC
+  MLIRIR
+  MLIRControlFlowInterfaces
+  MLIRInferTypeOpInterface
+  MLIRFunctionInterfaces
+  XBSyntaxGenUtils
+)
