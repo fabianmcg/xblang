@@ -12,6 +12,8 @@ ninja
 
 `${LLVM_ROOT}` is the path where LLVM is installed.
 
+**NOTE:** The only platform that has been tested for building the compiler is Linux+Clang(>17)
+
 ### Example:
 
 Running:
